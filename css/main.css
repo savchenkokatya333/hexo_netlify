@@ -1851,7 +1851,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #959918;
+  background: #ffc93c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2845,4 +2845,75 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.post {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 14px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 14px rgba(202,203,204,0.5);
+  border-radius: 8px;
+  background: #fff;
+}
+.posts-expand .post-title,
+.posts-expand .post-meta {
+  text-align: center;
+  font-family: Athelas, Microsoft Yahei, serif;
+}
+.post-body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+.header {
+  background: url("/images/bg_2.jpg");
+  height: 120px;
+}
+.site-meta {
+  float: none;
+}
+.menu {
+  float: none;
+}
+.logo-line-before,
+.logo-line-after {
+  display: none;
+}
+.menu .menu-item a {
+  font-size: 14px;
+  color: #0f2e41;
+  border-radius: 4px;
+}
+.site-meta {
+  margin-left: 0px;
+  text-align: center;
+  margin-top: 20px;
+}
+.site-meta .site-title {
+  font-size: 32px;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #6ca1d5;
+}
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  background: url("/images/bg_3.png");
+}
+.header-inner {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.footer {
+  background: url("/images/bg_3.png");
+  font-size: 16px;
+}
+.footer-inner {
+  font-family: 'Comic Sans MS', sans-serif;
+  text-align: center;
 }
