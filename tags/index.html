@@ -303,23 +303,6 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
-
-  </li>
 
       
       
@@ -338,9 +321,6 @@
     
 
     
-    
-      
-      
     
       
       
@@ -456,10 +436,30 @@
                     
                   
                 
-                目前共计 5 个标签
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                目前共计 10 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/LeetCode/" style="font-size: 30px; color: #111">LeetCode</a> <a href="/tags/动态规划/" style="font-size: 12px; color: #ccc">动态规划</a> <a href="/tags/字符串/" style="font-size: 21px; color: #6f6f6f">字符串</a> <a href="/tags/最大子序列/" style="font-size: 12px; color: #ccc">最大子序列</a> <a href="/tags/经典题/" style="font-size: 12px; color: #ccc">经典题</a>
+              <a href="/tags/LeetCode/" style="font-size: 30px; color: #ff512f">LeetCode</a> <a href="/tags/二分查找/" style="font-size: 16.5px; color: #b13bbe">二分查找</a> <a href="/tags/动态规划/" style="font-size: 16.5px; color: #b13bbe">动态规划</a> <a href="/tags/字符串/" style="font-size: 21px; color: #cb428f">字符串</a> <a href="/tags/字符串公共前缀/" style="font-size: 12px; color: #9733ee">字符串公共前缀</a> <a href="/tags/最大子序列/" style="font-size: 12px; color: #9733ee">最大子序列</a> <a href="/tags/栈/" style="font-size: 16.5px; color: #b13bbe">栈</a> <a href="/tags/经典题/" style="font-size: 12px; color: #9733ee">经典题</a> <a href="/tags/递归/" style="font-size: 12px; color: #9733ee">递归</a> <a href="/tags/链表/" style="font-size: 25.5px; color: #e54a5f">链表</a>
             </div>
           </div>
         
@@ -509,6 +509,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="民谣狗">
+            
               <p class="site-author-name" itemprop="name">民谣狗</p>
               <p class="site-description motion-element" itemprop="description">生活不止coding，还有debug</p>
           </div>
@@ -520,7 +522,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -560,7 +562,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -570,6 +582,32 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/yxCtgu" title="GitHub &rarr; https://github.com/yxCtgu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/yx2013112322@sina.com" title="E-Mail &rarr; yx2013112322@sina.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
           
 
           
@@ -1071,75 +1109,6 @@
   
 
   
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
-        .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + "eB6ypUkSV5yPSQB9tj701DPD-gzGzoHsz")
-        .done(function ({ api_server }) {
-          var Counter = function (method, url, data) {
-            return $.ajax({
-              method: method,
-              url: `https://${api_server}/1.1${url}`,
-              headers: {
-                'X-LC-Id': "eB6ypUkSV5yPSQB9tj701DPD-gzGzoHsz",
-                'X-LC-Key': "6QGxHl6XAbItUjjQoGmbaCxH",
-                'Content-Type': 'application/json',
-              },
-              data: data,
-            });
-          };
-          
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
-          
-        })
-    });
-  </script>
-
-
-
-  
 
   
 <script>
@@ -1161,6 +1130,43 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+    overflow: auto hidden;
+}
+</style>
+
+    
+  
+
 
   
   
