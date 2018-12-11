@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://smileyx.top/LeetCode-088-Merge%20Sorted%20Array.html</loc>
+    
+    <lastmod>2018-12-11T08:31:26.298Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://smileyx.top/LeetCode-070-Climbing%20Stairs.html</loc>
+    
+    <lastmod>2018-12-11T01:44:08.330Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://smileyx.top/LeetCode-007-Reverse%20Integer.html</loc>
     
     <lastmod>2018-12-10T12:29:04.219Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://smileyx.top/LeetCode-83-Remove%20Duplicates%20from%20Sorted%20List.html</loc>
     
     <lastmod>2018-12-10T03:01:29.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://smileyx.top/LeetCode-070-Climbing%20Stairs.html</loc>
-    
-    <lastmod>2018-12-10T02:55:36.874Z</lastmod>
     
   </url>
   
