@@ -108,25 +108,27 @@
 
 
 
-  <meta name="description" content="Given a string containing just the characters &amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;, &amp;#39;{&amp;#39;, &amp;#39;}&amp;#39;, &amp;#39;[&amp;#39; and &amp;#39;]&amp;#39;, determine if the input string is valid. An input string is valid if:  Ope">
-<meta name="keywords" content="LeetCode,栈">
+  <meta name="description" content="Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. A mapping of digit to letters (just like on the telephone buttons) is give">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【easy】Valid Parentheses">
-<meta property="og:url" content="https://smileyx.top/LeetCode-020-Valid Parentheses.html">
+<meta property="og:title" content="【medium】Letter Combinations of a Phone Number">
+<meta property="og:url" content="https://smileyx.top/LeetCode-017-Letter Combinations of a Phone Number.html">
 <meta property="og:site_name" content="Vayne">
-<meta property="og:description" content="Given a string containing just the characters &amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;, &amp;#39;{&amp;#39;, &amp;#39;}&amp;#39;, &amp;#39;[&amp;#39; and &amp;#39;]&amp;#39;, determine if the input string is valid. An input string is valid if:  Ope">
+<meta property="og:description" content="Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. A mapping of digit to letters (just like on the telephone buttons) is give">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-08T08:16:01.798Z">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-24-200px-Telephone-keypad2.svg.png">
+<meta property="og:updated_time" content="2018-12-24T03:02:31.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【easy】Valid Parentheses">
-<meta name="twitter:description" content="Given a string containing just the characters &amp;#39;(&amp;#39;, &amp;#39;)&amp;#39;, &amp;#39;{&amp;#39;, &amp;#39;}&amp;#39;, &amp;#39;[&amp;#39; and &amp;#39;]&amp;#39;, determine if the input string is valid. An input string is valid if:  Ope">
+<meta name="twitter:title" content="【medium】Letter Combinations of a Phone Number">
+<meta name="twitter:description" content="Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. A mapping of digit to letters (just like on the telephone buttons) is give">
+<meta name="twitter:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-24-200px-Telephone-keypad2.svg.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://smileyx.top/LeetCode-020-Valid Parentheses.html">
+  <link rel="canonical" href="https://smileyx.top/LeetCode-017-Letter Combinations of a Phone Number.html">
 
 
 
@@ -136,7 +138,7 @@
   };
 </script>
 
-  <title>【easy】Valid Parentheses | Vayne</title>
+  <title>【medium】Letter Combinations of a Phone Number | Vayne</title>
   
 
 
@@ -381,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-020-Valid Parentheses.html">
+    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-017-Letter Combinations of a Phone Number.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Vayne">
@@ -398,7 +400,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【easy】Valid Parentheses
+          <h2 class="post-title" itemprop="name headline">【medium】Letter Combinations of a Phone Number
               
             
           </h2>
@@ -423,7 +425,7 @@
                 
               
 
-              <time title="创建时间：2018-12-08 16:08:55 / 修改时间：16:16:01" itemprop="dateCreated datePublished" datetime="2018-12-08T16:08:55+08:00">2018-12-08</time>
+              <time title="创建时间：2018-12-24 10:45:12 / 修改时间：11:02:31" itemprop="dateCreated datePublished" datetime="2018-12-24T10:45:12+08:00">2018-12-24</time>
             
 
             
@@ -479,34 +481,24 @@
       
 
       
-        <p>Given a string containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
-<p>An input string is valid if:</p>
-<ol>
-<li>Open brackets must be closed by the same type of brackets.</li>
-<li>Open brackets must be closed in the correct order.</li>
-</ol>
-<p>Note that an empty string is also considered valid.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;()&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+        <p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>
+<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-24-200px-Telephone-keypad2.svg.png" alt=""></p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;23&quot;</span><br><span class="line">Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<p>Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
 <a id="more"></a>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;()[]&#123;&#125;&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
-<p><strong>Example 3:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;(]&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
-<p><strong>Example 4:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;([)]&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
-<p><strong>Example 5:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;&#123;[]&#125;&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="思路分析："><a href="#思路分析：" class="headerlink" title="思路分析："></a>思路分析：</h3><ul>
-<li>因为就是单单判断括号匹配，没有加入运算，所以思路很简单，遍历字符串，若是左括号，则进栈，否则判断栈顶元素是否与之匹配，若匹配则让栈顶元素出栈并继续循环，若不匹配直接返回<code>False</code>退出循环。但是需要注意的是最后循环结束后，若栈中还剩元素，则还是需要返回<code>False</code></li>
+<li>挨个遍历，列出所有的组合，具体见代码 1.1</li>
 </ul>
 <hr>
-<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isValid</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">		  :type***s: str</span></span><br><span class="line"><span class="string">		  :rtype***: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">		<span class="keyword">if</span> len(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            matchs = &#123;<span class="string">'('</span>: <span class="string">')'</span>, <span class="string">'['</span>: <span class="string">']'</span>, <span class="string">'&#123;'</span>: <span class="string">'&#125;'</span>&#125;</span><br><span class="line">            stack = []</span><br><span class="line">            <span class="keyword">for</span> s <span class="keyword">in</span> s:</span><br><span class="line">                <span class="keyword">if</span> s <span class="keyword">in</span> matchs:</span><br><span class="line">                    stack.append(s)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">if</span> stack:</span><br><span class="line">                        <span class="keyword">if</span> matchs.get(stack[len(stack)<span class="number">-1</span>]) == s:</span><br><span class="line">                            stack.pop()</span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span> <span class="keyword">if</span> stack <span class="keyword">else</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
-<p>开始提交时总错误，还是考虑问题不够全面，只考虑了正常情况。另外，字典的遍历在前面<code>读取 txt 内容，写入 xls 文件</code>中写过了。在写这个题的时候就有写一个简单的栈的想法，刚好在<code>LeetCode</code>上找到了这种题，那下篇就撸个简单的栈吧。</p>
+<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">letterCombinations</span><span class="params">(self, digits)</span>:</span></span><br><span class="line">        digit_letters_map = &#123;<span class="string">'2'</span>: <span class="string">'abc'</span>, <span class="string">'3'</span>: <span class="string">'def'</span>, <span class="string">'4'</span>: <span class="string">'ghi'</span>, <span class="string">'5'</span>: <span class="string">'jkl'</span>,</span><br><span class="line">                             <span class="string">'6'</span>: <span class="string">'mno'</span>, <span class="string">'7'</span>: <span class="string">'pqrs'</span>, <span class="string">'8'</span>: <span class="string">'tuv'</span>, <span class="string">'9'</span>: <span class="string">'wxyz'</span>&#125;</span><br><span class="line">        temp_res = []</span><br><span class="line">        <span class="keyword">for</span> t <span class="keyword">in</span> range(len(digits)):</span><br><span class="line">            letters = digit_letters_map[digits[t]]</span><br><span class="line">            <span class="keyword">for</span> letter <span class="keyword">in</span> letters:</span><br><span class="line">                <span class="keyword">if</span> t == <span class="number">0</span>:</span><br><span class="line">                    temp_res.append(letter)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">for</span> index <span class="keyword">in</span> range(len(temp_res)):</span><br><span class="line">                        <span class="keyword">if</span> len(temp_res[index]) == t:</span><br><span class="line">                            temp_res[index] += letter</span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            temp_res.append(temp_res[index][:<span class="number">-1</span>] + letter)</span><br><span class="line">        <span class="keyword">return</span> list(set(temp_res))</span><br></pre></td></tr></table></figure>
+<p>可以看到我的代码里<code>if</code>判断尤其多，而好的算法好像就很简单，<code>if</code>判断感觉有点打补丁的意思，补丁太多就显得很烂。这几个循环写的时候弄了好久，特别是第三个循环中的内容。</p>
 <hr>
 <h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul>
-<li><a href="https://leetcode.com/problems/valid-parentheses/" target="_blank" rel="noopener">题目链接</a></li>
+<li><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="noopener">题目链接</a></li>
 </ul>
 
       
@@ -533,8 +525,6 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
-            <a href="/tags/栈/" rel="tag"># 栈</a>
-          
         </div>
       
 
@@ -546,8 +536,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LeetCode-021-Merge Two Sorted Lists.html" rel="next" title="【easy】Merge Two Sorted Lists">
-                <i class="fa fa-chevron-left"></i> 【easy】Merge Two Sorted Lists
+              <a href="/LeetCode-016-3Sum Closest.html" rel="next" title="【medium】3Sum Closest">
+                <i class="fa fa-chevron-left"></i> 【medium】3Sum Closest
               </a>
             
           </div>
@@ -555,10 +545,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/LeetCode-014-Longest Common Prefix.html" rel="prev" title="【easy】Longest Common Prefix">
-                【easy】Longest Common Prefix <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
