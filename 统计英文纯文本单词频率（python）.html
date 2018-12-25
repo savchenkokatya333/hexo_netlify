@@ -108,24 +108,34 @@
 
 
 
-  <meta name="description" content="生活不止coding，还有debug">
-<meta name="keywords" content="博客，学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vayne">
-<meta property="og:url" content="https://smileyx.top/archives/2017/index.html">
+  <meta name="description" content="思路：要统计单词的词频，首先要打开文件，读取其中的内容，然后通过正则表达式处理一下，排除符号的干扰，剩下的就是单词，最后将单词加入字典并统计次数。">
+<meta name="keywords" content="python,文件读写,正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计英文纯文本单词频率（python）">
+<meta property="og:url" content="https://smileyx.top/统计英文纯文本单词频率（python）.html">
 <meta property="og:site_name" content="Vayne">
-<meta property="og:description" content="生活不止coding，还有debug">
+<meta property="og:description" content="思路：要统计单词的词频，首先要打开文件，读取其中的内容，然后通过正则表达式处理一下，排除符号的干扰，剩下的就是单词，最后将单词加入字典并统计次数。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-10/69281632.jpg">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/65223050.jpg">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/31817055.jpg">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/66.jpg">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539246393%281%29.jpg">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539252673%281%29.jpg">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539252711%281%29.jpg">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539256524%281%29.jpg">
+<meta property="og:updated_time" content="2018-12-25T13:59:13.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vayne">
-<meta name="twitter:description" content="生活不止coding，还有debug">
+<meta name="twitter:title" content="统计英文纯文本单词频率（python）">
+<meta name="twitter:description" content="思路：要统计单词的词频，首先要打开文件，读取其中的内容，然后通过正则表达式处理一下，排除符号的干扰，剩下的就是单词，最后将单词加入字典并统计次数。">
+<meta name="twitter:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-10/69281632.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://smileyx.top/archives/2017/">
+  <link rel="canonical" href="https://smileyx.top/统计英文纯文本单词频率（python）.html">
 
 
 
@@ -135,7 +145,7 @@
   };
 </script>
 
-  <title>归档 | Vayne</title>
+  <title>统计英文纯文本单词频率（python） | Vayne</title>
   
 
 
@@ -184,7 +194,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -238,7 +248,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -319,28 +329,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -386,253 +374,253 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smileyx.top/统计英文纯文本单词频率（python）.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vayne">
+      <meta itemprop="description" content="生活不止coding，还有debug">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vayne">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">统计英文纯文本单词频率（python）
+              
+            
+          </h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-16 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-16T00:00:00+08:00">2018-11-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-25 21:59:13" itemprop="dateModified" datetime="2018-12-25T21:59:13+08:00">2018-12-25</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 30 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/python练习册/" itemprop="url" rel="index"><span itemprop="name">python练习册</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/LeetCode-069-Sqrt(x).html" itemprop="url">
-              
-                <span itemprop="name">【easy】Sqrt(x)</span>
-              
-            </a>
-        
-      </h3>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-01-02T00:00:00+08:00" content="2017-01-02">
-          01-02
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/LeetCode-067-Add Binary.html" itemprop="url">
-              
-                <span itemprop="name">【easy】Add Binary</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-01-02T00:00:00+08:00" content="2017-01-02">
-          01-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/LeetCode-066-Plus One.html" itemprop="url">
-              
-                <span itemprop="name">【easy】Plus One</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-01-02T00:00:00+08:00" content="2017-01-02">
-          01-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><strong>思路：</strong>要统计单词的词频，首先要打开文件，读取其中的内容，然后通过正则表达式处理一下，排除符号的干扰，剩下的就是单词，最后将单词加入字典并统计次数。<a id="more"></a>下面上具体代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countFromFile</span><span class="params">(filePath)</span>:</span></span><br><span class="line">    dic = &#123;&#125;</span><br><span class="line">    <span class="keyword">with</span> open(filePath, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">            txt = re.sub(<span class="string">r'[.?!,""/]'</span>, <span class="string">' '</span>, line)</span><br><span class="line">            <span class="keyword">for</span> word <span class="keyword">in</span> txt.lower().split():</span><br><span class="line">                <span class="keyword">if</span> word <span class="keyword">in</span> dic:</span><br><span class="line">                    dic[word] += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dic[word] = <span class="number">1</span></span><br><span class="line">                    </span><br><span class="line">    <span class="keyword">for</span> word, count <span class="keyword">in</span> Counter(dic).most_common(<span class="number">5</span>):</span><br><span class="line">        print(word, count)</span><br><span class="line">    print(<span class="string">'----------------------'</span>)</span><br><span class="line">    <span class="keyword">for</span> word, count <span class="keyword">in</span> dic.items():</span><br><span class="line">        print(word, count)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    countFromFile(<span class="string">'C:/Users/尹鑫/Desktop/test.txt'</span>)</span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-10/69281632.jpg" alt=""></p>
+<hr>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><ul>
+<li><strong>关于文件读写：</strong><br>这里的写法是最常用的，在<code>with</code>语句中随便对文件操作，而不需要关心文件关闭的问题，会自动帮我们调用<code>f.close()</code>方法。然后就是文件的读，<code>read()</code>和<code>readlines()</code>会一次性读取文件的全部内容，区别是前者是将整个文件当作字符串处理，后者会返回一个list，每个元素就是一行。而<code>readline()</code>则是每次只会读取一行的内容，适用于内存小而文件巨大的情况（反正现在没碰到过，暂且不管），并且它的速度也很慢，一般都不会用它的。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countFromFile</span><span class="params">(filePath)</span>:</span></span><br><span class="line">    <span class="keyword">with</span> open(filePath, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        print(<span class="string">'read()返回的类型：'</span>, type(f.read()))</span><br><span class="line">        print(<span class="string">'readlines()返回的类型：'</span>, type(f.readlines()))</span><br><span class="line">        print(<span class="string">'readline()返回的类型：'</span>, type(f.readline()))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    countFromFile(<span class="string">'C:/Users/尹鑫/Desktop/test.txt'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/65223050.jpg" alt="">        </p>
+<ul>
+<li><p><strong>关于<code>re</code>模块:</strong><br>在python中<code>re</code>模块是用来处理正则表达式的。由于在正则表达式中用<code>\</code>转义，python中也用<code>\</code>来转义，所以为了保护视力，一般用<code>r</code>前缀的字符串表达形式，如<code>s = r&#39;aBc\-6&#39;</code>，<code>r</code>后面引号内就是字符串的内容，不用考虑转义的问题了。这里用到的<code>re.sub()</code>，官方是这样说的：<br><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/31817055.jpg" alt=""></p>
+<p>简单理解一下就是用<code>pattern</code>对象来匹配<code>string</code>，将匹配成功的部分用<code>repl</code>替换。这里就是用空格来替换<code>[.?!,&quot;&quot;/]</code>这些在英文中可能出现的符号。</p>
+</li>
+<li><p><strong>关于<code>Counter</code>对象:</strong></p>
+<p>看看官方是怎么说的:</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/66.jpg" alt=""></p>
+<p>它是dict的子类，可以对字典里的数据做一些统计操作，例如这里用到的<code>most_common(n)</code>方法：</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539246393%281%29.jpg" alt=""></p>
+<p>它返回频次最高的n组数据</p>
+</li>
+</ul>
+<hr>
+<h4 id="小小拓展一下："><a href="#小小拓展一下：" class="headerlink" title="小小拓展一下："></a>小小拓展一下：</h4><ul>
+<li><p><strong>在上面的基础上，考虑单词通过<code>-</code>换行的情况，修改代码如下：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countFromFile</span><span class="params">(filePath)</span>:</span></span><br><span class="line">    dic = &#123;&#125;</span><br><span class="line">    <span class="keyword">with</span> open(filePath, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        flag = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">            txt = re.sub(<span class="string">r'[.?!,""/]'</span>, <span class="string">' '</span>, line)</span><br><span class="line">            <span class="keyword">for</span> word <span class="keyword">in</span> txt.lower().split():</span><br><span class="line">                <span class="keyword">if</span> word[<span class="number">-1</span>] == <span class="string">'-'</span>:</span><br><span class="line">                    halfWord = word[:<span class="number">-1</span>]</span><br><span class="line">                    flag = <span class="number">1</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="keyword">if</span> flag == <span class="number">1</span>:</span><br><span class="line">                    word = halfWord + word</span><br><span class="line">                    flag = <span class="number">0</span></span><br><span class="line">                <span class="keyword">if</span> word <span class="keyword">in</span> dic:</span><br><span class="line">                    dic[word] += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dic[word] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> word, count <span class="keyword">in</span> Counter(dic).most_common(<span class="number">5</span>):</span><br><span class="line">        print(word, count)</span><br><span class="line">    print(<span class="string">'----------------------'</span>)</span><br><span class="line">    <span class="keyword">for</span> word, count <span class="keyword">in</span> dic.items():</span><br><span class="line">        print(word, count)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    countFromFile(<span class="string">'C:/Users/尹鑫/Desktop/test.txt'</span>)</span><br></pre></td></tr></table></figure>
+<p>在<code>test.txt</code>文件中，故意将<code>restricted</code>和<code>China</code>通过<code>-</code>连在一起，看是否能正确合并为一个单词：</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539252673%281%29.jpg" alt=""></p>
+<p>结果正确！</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539252711%281%29.jpg" alt=""></p>
+</li>
+<li><p><strong>上面统计的单词，这里统计字母的频次，修改代码如下：</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countFromFile</span><span class="params">(filePath)</span>:</span></span><br><span class="line">    dic = &#123;&#125;</span><br><span class="line">    notCount = <span class="string">r'[],./?!’“”-'</span></span><br><span class="line">    <span class="keyword">with</span> open(filePath, <span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">            txt = line.lower().split()</span><br><span class="line">            <span class="keyword">for</span> word <span class="keyword">in</span> txt:</span><br><span class="line">                <span class="keyword">for</span> alph <span class="keyword">in</span> word:</span><br><span class="line">                    <span class="keyword">if</span> alph <span class="keyword">not</span> <span class="keyword">in</span> notCount:</span><br><span class="line">                        <span class="keyword">if</span> alph <span class="keyword">in</span> dic:</span><br><span class="line">                            dic[alph] += <span class="number">1</span></span><br><span class="line">                        <span class="keyword">else</span>:</span><br><span class="line">                            dic[alph] = <span class="number">1</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">for</span> key,value <span class="keyword">in</span> Counter(dic).most_common(<span class="number">5</span>):</span><br><span class="line">        print(key, value)</span><br><span class="line">    print(<span class="string">'--------------------'</span>)</span><br><span class="line">    <span class="keyword">for</span> key,value <span class="keyword">in</span> dic.items():</span><br><span class="line">        print(key, value)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    countFromFile(<span class="string">'C:/Users/尹鑫/Desktop/test.txt'</span>)</span><br></pre></td></tr></table></figure>
+<p>这里没有用正则表达式，而是定义了可能出现符号的字符串，最后判断<code>not in</code>就好。结果如下：</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/18-10-11/1539256524%281%29.jpg" alt=""></p>
+</li>
+</ul>
+<hr>
+<h4 id="拓展阅读："><a href="#拓展阅读：" class="headerlink" title="拓展阅读："></a>拓展阅读：</h4><ul>
+<li><a href="https://mp.weixin.qq.com/s/Md07VoaULda7qnMO4ob7Ww" target="_blank" rel="noopener">给Python学习者的文件读写指南</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/explore-python/Regular-Expressions/re.html" target="_blank" rel="noopener">re模块-极客学院</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143193331387014ccd1040c814dee8b2164bb4f064cff000" target="_blank" rel="noopener">正则表达式-廖雪峰</a></li>
+<li><a href="https://docs.python.org/2/library/collections.html#collections.Counter" target="_blank" rel="noopener">Collections:Counter 官方文档</a></li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/LeetCode-155-Min Stack.html" itemprop="url">
-              
-                <span itemprop="name">【easy】Min Stack</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-01-02T00:00:00+08:00" content="2017-01-02">
-          01-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/LeetCode-070-Climbing Stairs.html" itemprop="url">
-              
-                <span itemprop="name">【easy】Climbing Stairs</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-01-02T00:00:00+08:00" content="2017-01-02">
-          01-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/LeetCode-058-Length of Last Word.html" itemprop="url">
-              
-                <span itemprop="name">【easy】Length of Last Word</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-01-01T00:00:00+08:00" content="2017-01-01">
-          01-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/文件读写/" rel="tag"># 文件读写</a>
+          
+            <a href="/tags/正则表达式/" rel="tag"># 正则表达式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/LeetCode-058-Length of Last Word.html" rel="next" title="【easy】Length of Last Word">
+                <i class="fa fa-chevron-left"></i> 【easy】Length of Last Word
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/统计代码行数（python）.html" rel="prev" title="统计代码行数（python）">
+                统计代码行数（python） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -653,8 +641,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -671,7 +668,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -690,7 +687,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -731,7 +730,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -782,6 +791,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结："><span class="nav-number">1.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小小拓展一下："><span class="nav-number">2.</span> <span class="nav-text">小小拓展一下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展阅读："><span class="nav-number">3.</span> <span class="nav-text">拓展阅读：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -912,6 +937,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
