@@ -118,7 +118,9 @@
 <meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-19-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-19%2022.09.47.png">
 <meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-24-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-24%2011.57.52.png">
 <meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-24-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-24%2011.14.22.png">
-<meta property="og:updated_time" content="2018-12-25T11:50:11.622Z">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-28-PostRedirectGet_DoubleSubmitProblem.png">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-28-PostRedirectGet_DoubleSubmitSolution.png">
+<meta property="og:updated_time" content="2018-12-29T06:54:20.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次用Flask搭建简单博客">
 <meta name="twitter:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-18-63858f3716f4ddf6047e8921d2d86418.jpg">
@@ -442,7 +444,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-25 19:50:11" itemprop="dateModified" datetime="2018-12-25T19:50:11+08:00">2018-12-25</time>
+                <time title="修改时间：2018-12-29 14:54:20" itemprop="dateModified" datetime="2018-12-29T14:54:20+08:00">2018-12-29</time>
               
             
           </span>
@@ -565,7 +567,19 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(UserMixin, db.Model)</span>:</span></span><br><span class="line">	<span class="comment">#...</span></span><br><span class="line">    followed = db.relationship(</span><br><span class="line">        <span class="string">'User'</span>, secondary=followers,</span><br><span class="line">        primaryjoin=(followers.c.follower_id == id),</span><br><span class="line">        secondaryjoin=(followers.c.followed_id == id),</span><br><span class="line">        backref=db.backref(<span class="string">'followers'</span>, lazy=<span class="string">'dynamic'</span>),</span><br><span class="line">        lazy=<span class="string">'dynamic'</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">follow</span><span class="params">(self, user)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.is_following(user):</span><br><span class="line">            self.followed.append(user)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">unfollow</span><span class="params">(self, user)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.is_following(user):</span><br><span class="line">            self.followed.remove(user)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_following</span><span class="params">(self, user)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.followed.filter(followers.c.followed_id == user.id).count() &gt; <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">followed_posts</span><span class="params">(self)</span>:</span></span><br><span class="line">        followed = Post.query.join(followers, (followers.c.followed_id == Post.userId)). \</span><br><span class="line">            filter(followers.c.follower_id == self.id)</span><br><span class="line">        own = Post.query.filter_by(userId=self.id)</span><br><span class="line">        <span class="keyword">return</span> followed.union(own).order_by(Post.timestamp.desc())</span><br></pre></td></tr></table></figure>
 <p>这里用到了数据库的<code>join、union</code>操作，这以前在我的知识库里都是高级操作。现在借此重新学习下，<strong><code>join</code>操作的本质就是多表的结合重构</strong>，具体还是看网上的教程吧：<a href="https://coolshell.cn/articles/3463.html" target="_blank" rel="noopener">图解SQL的JOIN</a>、<a href="https://mazhuang.org/2017/09/11/joins-in-sql/" target="_blank" rel="noopener">图解 SQL 里的各种 JOIN</a>、<a href="https://zh.wikipedia.org/wiki/%E8%BF%9E%E6%8E%A5_(SQL" target="_blank" rel="noopener">wiki</a>)、<a href="https://segmentfault.com/a/1190000007926959#articleHeader3" target="_blank" rel="noopener">MySQL必知必会:组合查询(union)</a>、<a href="https://blog.csdn.net/ljxfblog/article/details/52066006" target="_blank" rel="noopener">关于SQL中Union和Join的用法</a>，理解后再看这个查询语句就好理解多了。另外本节作者讲的很仔细，复习时一定回去看原文。</p>
 <hr>
-<h3 id="Day-6"><a href="#Day-6" class="headerlink" title="Day 6"></a>Day 6</h3>
+<h3 id="Day-6"><a href="#Day-6" class="headerlink" title="Day 6"></a>Day 6</h3><p>第 6 节首先完成了填写文章并发表的功能，流程依旧一样：</p>
+<p>①写发表文章所需的表单</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PostForm</span><span class="params">(FlaskForm)</span>:</span></span><br><span class="line">    post = TextAreaField(<span class="string">'说点什么...'</span>, validators=[DataRequired(), Length(min=<span class="number">1</span>, max=<span class="number">140</span>)])</span><br><span class="line">    submit = SubmitField(<span class="string">'发表'</span>)</span><br></pre></td></tr></table></figure>
+<p>②在<code>index.html</code>中加入刚才新建的表单元素</p>
+<p>③配置路由</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/', methods=['GET', 'POST'])</span></span><br><span class="line"><span class="meta">@app.route('/index', methods=['GET', 'POST'])</span></span><br><span class="line"><span class="meta">@login_required</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    form = PostForm()</span><br><span class="line">    <span class="keyword">if</span> form.validate_on_submit():</span><br><span class="line">        post = Post(body = form.post.data, author = current_user)</span><br><span class="line">        db.session.add(post)</span><br><span class="line">        db.session.commit()</span><br><span class="line">        flash(<span class="string">'发表成功！'</span>)</span><br><span class="line">        <span class="keyword">return</span> redirect(url_for(<span class="string">'index'</span>))</span><br><span class="line">    posts = current_user.followed_posts().all()</span><br><span class="line">    <span class="keyword">return</span> render_template(<span class="string">'/index.html'</span>, title=<span class="string">'主页'</span>, form = form, posts=posts)</span><br></pre></td></tr></table></figure>
+<p>作者在这里提到了一个<code>PRG</code>模式，即<code>Post/Redirect/Get</code>，可以看到在这里处理完提交过来的表单数据后，并不是接着执行下面的，而重定向到了<code>index</code>页面，为什么呢？因为浏览器刷新的操作会执行前面最后一次请求，如果我们没有用<code>redirect</code>，那么最后一次是<code>Post</code>请求，刷新会重复提交表单数据，而用<code>redirect</code>后，最后一次请求变成了<code>Get</code>请求，刷新只会重复请求该页面，不会重复提交数据了。<a href="https://en.wikipedia.org/wiki/Post/Redirect/Get" target="_blank" rel="noopener">Post/Redirect/Get - wiki</a></p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-28-PostRedirectGet_DoubleSubmitProblem.png" alt=""></p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2018-12-28-PostRedirectGet_DoubleSubmitSolution.png" alt=""></p>
+<p>后面就是利用<code>Flask</code>提供的<code>paginate</code>方法来实现分页功能，没有特别的点，就不多说了。</p>
+<hr>
+<h3 id="Day-7"><a href="#Day-7" class="headerlink" title="Day 7"></a>Day 7</h3><p>第 11 节的内容是用<code>bootstrap</code>框架美化了一下页面，12 节的内容是处理时间，前面提过数据库要保存<code>UTC</code>时间，那么本节就是将从数据库拿出来的时间转换成当地时间。第 13 节是语言处理，即使应用支持其他语言。第 14 节是利用<code>ajax</code>来转换<code>post</code>的语言，可以不刷新整个网页，只更新部分内容，15 节是调整一下该项目的目录结构。这些我暂时不想研究，也就跳过了。</p>
+
       
     </div>
 
@@ -687,7 +701,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -708,7 +722,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -759,7 +775,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -820,7 +844,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1"><span class="nav-number">1.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-2"><span class="nav-number">2.</span> <span class="nav-text">Day 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-3"><span class="nav-number">3.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-4"><span class="nav-number">4.</span> <span class="nav-text">Day 4:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-5"><span class="nav-number">5.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-6"><span class="nav-number">6.</span> <span class="nav-text">Day 6</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-1"><span class="nav-number">1.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-2"><span class="nav-number">2.</span> <span class="nav-text">Day 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-3"><span class="nav-number">3.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-4"><span class="nav-number">4.</span> <span class="nav-text">Day 4:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-5"><span class="nav-number">5.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-6"><span class="nav-number">6.</span> <span class="nav-text">Day 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Day-7"><span class="nav-number">7.</span> <span class="nav-text">Day 7</span></a></li></ol></div>
             
 
           </div>
@@ -840,7 +864,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
