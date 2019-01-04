@@ -1854,7 +1854,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6a0a;
+  background: #a7d662;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3149,6 +3149,9 @@ i {
 }
 .post-nav-item a:hover {
   color: #f37055;
+}
+code {
+  background: none;
 }
 .posts-collapse {
   margin: 50px 0px;
