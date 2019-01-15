@@ -1854,7 +1854,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #081f53;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2901,6 +2901,13 @@ hr {
 }
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+code {
+  color: #6ca1d5;
+}
+pre,
+code {
+  font-family: Fira Code, consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
 .text-center {
   text-align: center;
