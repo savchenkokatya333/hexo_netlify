@@ -1898,7 +1898,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4e7dfc;
+  background: #2aff7c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2929,7 +2929,7 @@ code {
 .text-center {
   text-align: center;
 }
-.container {
+body {
   background: url("/images/bg_3.png");
 }
 .header-inner {
@@ -2938,7 +2938,7 @@ code {
 }
 .footer {
   background: url("/images/bg_3.png");
-  font-size: 16px;
+  font-size: 14px;
 }
 .footer-inner {
   font-family: 'Comic Sans MS', sans-serif;
