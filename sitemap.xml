@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://smileyx.top/LeetCode-020-Valid%20Parentheses.html</loc>
+    
+    <lastmod>2019-02-22T02:23:57.213Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://smileyx.top/LeetCode-050-Pow(x,%20n).html</loc>
     
     <lastmod>2019-02-22T02:07:19.429Z</lastmod>
@@ -152,13 +159,6 @@
     <loc>https://smileyx.top/LeetCode-024-Swap%20Nodes%20in%20Pairs.html</loc>
     
     <lastmod>2019-01-03T03:16:45.851Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://smileyx.top/LeetCode-020-Valid%20Parentheses.html</loc>
-    
-    <lastmod>2018-12-29T05:13:08.404Z</lastmod>
     
   </url>
   

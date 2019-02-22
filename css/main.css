@@ -1898,7 +1898,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6cff8e;
+  background: #fcde6e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2943,6 +2943,9 @@ body {
 .footer-inner {
   font-family: 'Comic Sans MS', sans-serif;
   text-align: center;
+}
+blockquote {
+  border-left: 4px solid #6ca1d5;
 }
 a {
   color: #6ca1d5;
