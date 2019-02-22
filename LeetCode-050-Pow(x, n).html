@@ -96,28 +96,27 @@
 
 
 
-  <meta name="description" content="You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise). Note: You have to rotate the image in-place, which means you have to modify the input 2D matrix dire">
-<meta name="keywords" content="LeetCode,二维数组旋转">
+  <meta name="description" content="Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: 12Input: 2.00000, 10Output: 1024.00000">
+<meta name="keywords" content="LeetCode,递归">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【medium】Rotate Image">
-<meta property="og:url" content="https://smileyx.top/LeetCode-048-Rotate Image.html">
+<meta property="og:title" content="【medium】Pow(x, n)">
+<meta property="og:url" content="https://smileyx.top/LeetCode-050-Pow(x, n).html">
 <meta property="og:site_name" content="Vayne">
-<meta property="og:description" content="You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise). Note: You have to rotate the image in-place, which means you have to modify the input 2D matrix dire">
+<meta property="og:description" content="Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: 12Input: 2.00000, 10Output: 1024.00000">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-01-19-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-19%2012.14.23.png">
-<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-01-21-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%2021.18.53.png">
-<meta property="og:updated_time" content="2019-01-21T13:20:40.322Z">
+<meta property="og:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-02-22-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-22%2010.05.55.png">
+<meta property="og:updated_time" content="2019-02-22T02:07:19.429Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【medium】Rotate Image">
-<meta name="twitter:description" content="You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise). Note: You have to rotate the image in-place, which means you have to modify the input 2D matrix dire">
-<meta name="twitter:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-01-19-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-19%2012.14.23.png">
+<meta name="twitter:title" content="【medium】Pow(x, n)">
+<meta name="twitter:description" content="Implement pow(x, n), which calculates x raised to the power n (xn). Example 1: 12Input: 2.00000, 10Output: 1024.00000">
+<meta name="twitter:image" content="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-02-22-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-22%2010.05.55.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://smileyx.top/LeetCode-048-Rotate Image.html">
+  <link rel="canonical" href="https://smileyx.top/LeetCode-050-Pow(x, n).html">
 
 
 
@@ -127,7 +126,7 @@
   };
 </script>
 
-  <title>【medium】Rotate Image | Vayne</title>
+  <title>【medium】Pow(x, n) | Vayne</title>
   
 
 
@@ -372,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-048-Rotate Image.html">
+    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-050-Pow(x, n).html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Vayne">
@@ -389,7 +388,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【medium】Rotate Image
+          <h2 class="post-title" itemprop="name headline">【medium】Pow(x, n)
 
               
             
@@ -415,24 +414,12 @@
                 
               
 
-              <time title="创建时间：2019-01-19 11:54:15" itemprop="dateCreated datePublished" datetime="2019-01-19T11:54:15+08:00">2019-01-19</time>
+              <time title="创建时间：2019-02-22 09:38:30 / 修改时间：10:07:19" itemprop="dateCreated datePublished" datetime="2019-02-22T09:38:30+08:00">2019-02-22</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-01-21 21:20:40" itemprop="dateModified" datetime="2019-01-21T21:20:40+08:00">2019-01-21</time>
               
             
           </span>
@@ -484,39 +471,25 @@
       
 
       
-        <p>You are given an <em>n</em> x <em>n</em> 2D matrix representing an image.</p>
-<p>Rotate the image by 90 degrees (clockwise).</p>
-<p><strong>Note:</strong></p>
-<p>You have to rotate the image <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank" rel="noopener"><strong>in-place</strong></a>, which means you have to modify the input 2D matrix directly. <strong>DO NOT</strong> allocate another 2D matrix and do the rotation.</p>
+        <p>Implement <a href="http://www.cplusplus.com/reference/valarray/pow/" target="_blank" rel="noopener">pow(<em>x</em>, <em>n</em>)</a>, which calculates <em>x</em> raised to the power <em>n</em> (xn).</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Given input matrix = </span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [4,5,6],</span><br><span class="line">  [7,8,9]</span><br><span class="line">],</span><br><span class="line"></span><br><span class="line">rotate the input matrix in-place such that it becomes:</span><br><span class="line">[</span><br><span class="line">  [7,4,1],</span><br><span class="line">  [8,5,2],</span><br><span class="line">  [9,6,3]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 2.00000, 10</span><br><span class="line">Output: 1024.00000</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Given input matrix =</span><br><span class="line">[</span><br><span class="line">  [ 5, 1, 9,11],</span><br><span class="line">  [ 2, 4, 8,10],</span><br><span class="line">  [13, 3, 6, 7],</span><br><span class="line">  [15,14,12,16]</span><br><span class="line">], </span><br><span class="line"></span><br><span class="line">rotate the input matrix in-place such that it becomes:</span><br><span class="line">[</span><br><span class="line">  [15,13, 2, 5],</span><br><span class="line">  [14, 3, 4, 1],</span><br><span class="line">  [12, 6, 8, 9],</span><br><span class="line">  [16, 7,10,11]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 2.10000, 3</span><br><span class="line">Output: 9.26100</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 2.00000, -2</span><br><span class="line">Output: 0.25000</span><br><span class="line">Explanation: 2-2 = 1/22 = 1/4 = 0.25</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="思路分析："><a href="#思路分析：" class="headerlink" title="思路分析："></a>思路分析：</h3><ul>
-<li><p>第一种方法就是按两个轴进行 2 次交换操作，画个图就懂了：</p>
-<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-01-19-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-19%2012.14.23.png" alt=""></p>
-</li>
-<li><p>第二种方法也是交换，只不过交换的方式不一样，它是近似一种旋转的方式，同样画个图：</p>
-<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-01-21-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%2021.18.53.png" alt=""></p>
-<p>这只画了一次移动过程，一次会交换 4 个点的值。</p>
-</li>
+<li>利用递归的方法将指数 n 减小到 0，任何数的 0 次方都是 1，然后再按缩小的路径往回乘，需要注意的是，如果 n 是偶数，则直接将前次递归的结果平方，如果 n 是奇数，则还需要在平方的基础上乘以底数 x。</li>
 </ul>
 <hr>
-<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><blockquote>
-<p>1.1</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">rotate</span><span class="params">(self, matrix)</span>:</span></span><br><span class="line">        loop_size = len(matrix[<span class="number">0</span>])</span><br><span class="line">        <span class="comment"># 按正对角线翻转</span></span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> range(loop_size<span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">for</span> col <span class="keyword">in</span> range(row+<span class="number">1</span>, loop_size):</span><br><span class="line">                matrix[row][col], matrix[col][row] = matrix[col][row], matrix[row][col]</span><br><span class="line">        <span class="comment"># 交换列，奇偶两种情况都可以一起处理</span></span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> range(loop_size):</span><br><span class="line">            <span class="keyword">for</span> col <span class="keyword">in</span> range(<span class="number">0</span>, loop_size//<span class="number">2</span>):</span><br><span class="line">                matrix[row][col], matrix[row][loop_size<span class="number">-1</span> -</span><br><span class="line">                                              col] = matrix[row][loop_size<span class="number">-1</span>-col], matrix[row][col]</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>2.1</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">rotate</span><span class="params">(self, matrix)</span>:</span></span><br><span class="line">        loop_size = len(matrix[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> range(loop_size//<span class="number">2</span>):</span><br><span class="line">            <span class="keyword">for</span> col <span class="keyword">in</span> range(row,loop_size-row<span class="number">-1</span>):</span><br><span class="line">                <span class="comment"># 方式一</span></span><br><span class="line">                matrix[row][col], matrix[col][loop_size-row<span class="number">-1</span>], matrix[loop_size-row<span class="number">-1</span>][loop_size-col<span class="number">-1</span>], matrix[loop_size-col<span class="number">-1</span>][row] = matrix[loop_size-col<span class="number">-1</span>][row], matrix[row][col], matrix[col][loop_size-row<span class="number">-1</span>], matrix[loop_size-row<span class="number">-1</span>][loop_size-col<span class="number">-1</span>]</span><br><span class="line">                <span class="comment"># 方式二</span></span><br><span class="line">                <span class="comment"># temp_a = matrix[col][loop_size-row-1]</span></span><br><span class="line">                <span class="comment"># matrix[col][loop_size-row-1] = matrix[row][col]</span></span><br><span class="line">                <span class="comment"># temp_b = matrix[loop_size-row-1][loop_size-col-1]</span></span><br><span class="line">                <span class="comment"># matrix[loop_size-row-1][loop_size-col-1] = temp_a</span></span><br><span class="line">                <span class="comment"># temp_a = matrix[loop_size-col-1][row]</span></span><br><span class="line">                <span class="comment"># matrix[loop_size-col-1][row] = temp_b</span></span><br><span class="line">                <span class="comment"># matrix[row][col] = temp_a</span></span><br></pre></td></tr></table></figure>
-<p>注意第 5 行，列的终止条件，开始我写的是<code>range(row, loop_size-row)</code>，没有再减 1 ，例如当<code>row = 0</code>时，<code>col</code>最终会走到最后一列，那样就会导致将正确的结果再多旋转一次。</p>
+<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myPow</span><span class="params">(self, x: <span class="string">'float'</span>, n: <span class="string">'int'</span>)</span> -&gt; 'float':</span></span><br><span class="line">        <span class="keyword">if</span> n &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>/self.myPowDFS(x, -n)</span><br><span class="line">        <span class="keyword">return</span> self.myPowDFS(x, n)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myPowDFS</span><span class="params">(self, x, n)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        res = self.myPowDFS(x, n//<span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> res*res</span><br><span class="line">        <span class="keyword">return</span> x*res*res</span><br></pre></td></tr></table></figure>
+<p>这段代码很大程度上可以说是抄的，无奈写不出来啊，递归真是个烦人的东西。画了个图以便理解递归的过程：</p>
+<p><img src="http://m-markdown-image.oss-cn-beijing.aliyuncs.com/2019-02-22-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-22%2010.05.55.png" alt=""></p>
 <hr>
 <h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul>
-<li><a href="https://leetcode.com/problems/rotate-image/" target="_blank" rel="noopener">题目链接</a></li>
-<li><a href="http://www.cnblogs.com/grandyang/p/4389572.html" target="_blank" rel="noopener">[LeetCode] Rotate Image 旋转图像</a></li>
+<li><a href="http://www.cnblogs.com/grandyang/p/4383775.html" target="_blank" rel="noopener">[LeetCode] Pow(x, n) 求x的n次方</a></li>
 </ul>
 
       
@@ -543,7 +516,7 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
-            <a href="/tags/二维数组旋转/" rel="tag"># 二维数组旋转</a>
+            <a href="/tags/递归/" rel="tag"># 递归</a>
           
         </div>
       
@@ -556,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LeetCode-043-Multiply Strings.html" rel="next" title="【medium】Multiply String">
-                <i class="fa fa-chevron-left"></i> 【medium】Multiply String
+              <a href="/LeetCode-049-Group Anagrams.html" rel="next" title="【medium】Group Anagrams">
+                <i class="fa fa-chevron-left"></i> 【medium】Group Anagrams
               </a>
             
           </div>
@@ -565,10 +538,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/LeetCode-049-Group Anagrams.html" rel="prev" title="【medium】Group Anagrams">
-                【medium】Group Anagrams <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
