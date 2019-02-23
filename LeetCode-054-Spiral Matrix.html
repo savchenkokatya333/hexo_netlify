@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="Implement int sqrt(int x). Compute and return the square root of x, where x is guaranteed to be a non-negative integer. Since the return type is an integer, the decimal digits are truncated and only t">
-<meta name="keywords" content="LeetCode,二分查找">
+  <meta name="description" content="Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order. Example 1: 1234567Input:[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ]]Output: [1,2,3,6,9,8,7,4,5]">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【easy】Sqrt(x)">
-<meta property="og:url" content="https://smileyx.top/LeetCode-069-Sqrt(x).html">
+<meta property="og:title" content="【easy】Spiral Matrix">
+<meta property="og:url" content="https://smileyx.top/LeetCode-054-Spiral Matrix.html">
 <meta property="og:site_name" content="Vayne">
-<meta property="og:description" content="Implement int sqrt(int x). Compute and return the square root of x, where x is guaranteed to be a non-negative integer. Since the return type is an integer, the decimal digits are truncated and only t">
+<meta property="og:description" content="Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order. Example 1: 1234567Input:[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ]]Output: [1,2,3,6,9,8,7,4,5]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-25T14:19:23.910Z">
+<meta property="og:updated_time" content="2019-02-23T02:32:47.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【easy】Sqrt(x)">
-<meta name="twitter:description" content="Implement int sqrt(int x). Compute and return the square root of x, where x is guaranteed to be a non-negative integer. Since the return type is an integer, the decimal digits are truncated and only t">
+<meta name="twitter:title" content="【easy】Spiral Matrix">
+<meta name="twitter:description" content="Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order. Example 1: 1234567Input:[ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ]]Output: [1,2,3,6,9,8,7,4,5]">
 
 
 
 
 
 
-  <link rel="canonical" href="https://smileyx.top/LeetCode-069-Sqrt(x).html">
+  <link rel="canonical" href="https://smileyx.top/LeetCode-054-Spiral Matrix.html">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>【easy】Sqrt(x) | Vayne</title>
+  <title>【easy】Spiral Matrix | Vayne</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-069-Sqrt(x).html">
+    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-054-Spiral Matrix.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Vayne">
@@ -386,7 +386,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【easy】Sqrt(x)
+          <h2 class="post-title" itemprop="name headline">【easy】Spiral Matrix
 
               
             
@@ -412,24 +412,12 @@
                 
               
 
-              <time title="创建时间：2018-11-16 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-16T00:00:00+08:00">2018-11-16</time>
+              <time title="创建时间：2019-02-23 10:13:49 / 修改时间：10:32:47" itemprop="dateCreated datePublished" datetime="2019-02-23T10:13:49+08:00">2019-02-23</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-25 22:19:23" itemprop="dateModified" datetime="2018-12-25T22:19:23+08:00">2018-12-25</time>
               
             
           </span>
@@ -481,25 +469,22 @@
       
 
       
-        <p>Implement <code>int sqrt(int x)</code>.</p>
-<p>Compute and return the square root of <em>x</em>, where <em>x</em> is guaranteed to be a non-negative integer.</p>
-<p>Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
+        <p>Given a matrix of <em>m</em> x <em>n</em> elements (<em>m</em> rows, <em>n</em> columns), return all elements of the matrix in spiral order.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 4</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[</span><br><span class="line"> [ 1, 2, 3 ],</span><br><span class="line"> [ 4, 5, 6 ],</span><br><span class="line"> [ 7, 8, 9 ]</span><br><span class="line">]</span><br><span class="line">Output: [1,2,3,6,9,8,7,4,5]</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: 8</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The square root of 8 is 2.82842..., and since </span><br><span class="line">             the decimal part is truncated, 2 is returned.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[</span><br><span class="line">  [1, 2, 3, 4],</span><br><span class="line">  [5, 6, 7, 8],</span><br><span class="line">  [9,10,11,12]</span><br><span class="line">]</span><br><span class="line">Output: [1,2,3,4,8,12,11,10,9,5,6,7]</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="思路分析："><a href="#思路分析：" class="headerlink" title="思路分析："></a>思路分析：</h3><ul>
-<li>原先想的是从 0 开始挨个儿遍历，然后找到其平方最接近且不超过<code>x</code>的数，但经过前面题目的洗礼，像暴力遍历的方法只能想一想而已，千万别去实现，太蠢了。那么这里就用二分查找吧，而且在网上恰巧看到说一个正数<code>x</code>的平方根不会大于$\frac{1}{2}x+1$，那么初始的左右边界就确定了，下面循环判断就好了，具体见代码。</li>
+<li>题目要求是螺旋式的输出矩阵元素，如果是不做处理直接硬解，下标转换那里会比较麻烦，下面参考中的博客中的方法二眼前一亮，核心思想就是将已经输出过的那一行（列）切掉，不断缩小矩阵，要切矩阵，就要知道矩阵四条边的位置，于是就有了<code>up = 0</code>、<code>down = m-1</code>、<code>left = 0</code>、<code>right = n-1</code>的初始化，每次输出完后就将相应的边做相应的移动，达到缩小矩阵的目的。</li>
 </ul>
-<p>[注]：其实网上对这题的思路还有一个什么牛顿迭代法，是一个基于迭代的方法，我不太喜欢，就不去实现了。</p>
 <hr>
-<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = (x // <span class="number">2</span>) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> pow(mid, <span class="number">2</span>) &lt; x:</span><br><span class="line">                left = mid+<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> pow(mid, <span class="number">2</span>) &gt; x:</span><br><span class="line">                right = mid<span class="number">-1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">if</span> pow(left, <span class="number">2</span>) &gt; x:</span><br><span class="line">            <span class="keyword">return</span> left<span class="number">-1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>
-<p>循环结束后这里的判断很重要，开始我就是直接返回<code>left</code>的值，发现有些情况没有考虑到。</p>
+<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">spiralOrder</span><span class="params">(self, matrix: <span class="string">'List[List[int]]'</span>)</span> -&gt; 'List[int]':</span></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">if</span> matrix:</span><br><span class="line">            up = <span class="number">0</span></span><br><span class="line">            down = len(matrix)<span class="number">-1</span></span><br><span class="line">            left = <span class="number">0</span></span><br><span class="line">            right = len(matrix[<span class="number">0</span>])<span class="number">-1</span></span><br><span class="line">            <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> range(left, right+<span class="number">1</span>):</span><br><span class="line">                    res.append(matrix[up][i])</span><br><span class="line">                up += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> up &gt; down:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> range(up, down+<span class="number">1</span>):</span><br><span class="line">                    res.append(matrix[i][right])</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> right &lt; left:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> range(right, left<span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">                    res.append(matrix[down][i])</span><br><span class="line">                down -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> down &lt; up:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> range(down, up<span class="number">-1</span>, <span class="number">-1</span>):</span><br><span class="line">                    res.append(matrix[i][left])</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> left &gt; right:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>代码看上去很烂是因为每输出完一条边后，就要判断是否要<code>break</code>，导致结构不好看。另外，起初写的时候卡在了什么时候要<code>break</code>，以为当<code>up == down</code>或<code>left == right</code>时就要<code>break</code>再做单独处理（例如m、n的就情况，该从哪个方向进行输出元素）。不过事实证明我想多了，只要上下、左右不越界，就可以继续下去，而一旦越界，意味着元素已经输出完了。</p>
 <hr>
 <h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul>
-<li><a href="https://leetcode.com/problems/sqrtx/" target="_blank" rel="noopener">题目链接</a></li>
+<li><a href="http://www.cnblogs.com/grandyang/p/4362675.html" target="_blank" rel="noopener">[LeetCode] Spiral Matrix 螺旋矩阵</a></li>
 </ul>
 
       
@@ -526,8 +511,6 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
-            <a href="/tags/二分查找/" rel="tag"># 二分查找</a>
-          
         </div>
       
 
@@ -539,8 +522,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/LeetCode-067-Add Binary.html" rel="next" title="【easy】Add Binary">
-                <i class="fa fa-chevron-left"></i> 【easy】Add Binary
+              <a href="/LeetCode-050-Pow(x, n).html" rel="next" title="【medium】Pow(x, n)">
+                <i class="fa fa-chevron-left"></i> 【medium】Pow(x, n)
               </a>
             
           </div>
@@ -548,10 +531,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/LeetCode-053-Maximum Subarray.html" rel="prev" title="【easy】Maximum Subarray">
-                【easy】Maximum Subarray <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
