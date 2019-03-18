@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero. Note: The solution set must not contai">
-<meta name="keywords" content="LeetCode,k-sum 问题">
+  <meta name="description" content="Given two integers n and k, return all possible combinations of k numbers out of 1 … n. Example: 12345678910Input: n = 4, k = 2Output:[  [2,4],  [3,4],  [2,3],  [1,2],  [1,3],  [1,4],]  思路分析： 题目要求列出从1">
+<meta name="keywords" content="LeetCode,递归">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【medium】3Sum">
-<meta property="og:url" content="https://smileyx.top/LeetCode-015-3Sum.html">
+<meta property="og:title" content="【medium】Combinations">
+<meta property="og:url" content="https://smileyx.top/LeetCode-077-Combinations.html">
 <meta property="og:site_name" content="Vayne">
-<meta property="og:description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero. Note: The solution set must not contai">
+<meta property="og:description" content="Given two integers n and k, return all possible combinations of k numbers out of 1 … n. Example: 12345678910Input: n = 4, k = 2Output:[  [2,4],  [3,4],  [2,3],  [1,2],  [1,3],  [1,4],]  思路分析： 题目要求列出从1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-26T05:39:42.063Z">
+<meta property="og:updated_time" content="2019-03-18T13:10:31.950Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【medium】3Sum">
-<meta name="twitter:description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero. Note: The solution set must not contai">
+<meta name="twitter:title" content="【medium】Combinations">
+<meta name="twitter:description" content="Given two integers n and k, return all possible combinations of k numbers out of 1 … n. Example: 12345678910Input: n = 4, k = 2Output:[  [2,4],  [3,4],  [2,3],  [1,2],  [1,3],  [1,4],]  思路分析： 题目要求列出从1">
 
 
 
 
 
 
-  <link rel="canonical" href="https://smileyx.top/LeetCode-015-3Sum.html">
+  <link rel="canonical" href="https://smileyx.top/LeetCode-077-Combinations.html">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>【medium】3Sum | Vayne</title>
+  <title>【medium】Combinations | Vayne</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-015-3Sum.html">
+    <link itemprop="mainEntityOfPage" href="https://smileyx.top/LeetCode-077-Combinations.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Vayne">
@@ -386,7 +386,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【medium】3Sum
+          <h2 class="post-title" itemprop="name headline">【medium】Combinations
 
               
             
@@ -412,24 +412,12 @@
                 
               
 
-              <time title="创建时间：2018-12-19 22:26:50" itemprop="dateCreated datePublished" datetime="2018-12-19T22:26:50+08:00">2018-12-19</time>
+              <time title="创建时间：2019-03-18 19:46:27 / 修改时间：21:10:31" itemprop="dateCreated datePublished" datetime="2019-03-18T19:46:27+08:00">2019-03-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-26 13:39:42" itemprop="dateModified" datetime="2018-12-26T13:39:42+08:00">2018-12-26</time>
               
             
           </span>
@@ -481,44 +469,18 @@
       
 
       
-        <p>Given an array <code>nums</code> of <em>n</em> integers, are there elements <em>a</em>, <em>b</em>, <em>c</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> = 0? Find all unique triplets in the array which gives the sum of zero.</p>
-<p><strong>Note:</strong></p>
-<p>The solution set must not contain duplicate triplets.</p>
+        <p>Given two integers <em>n</em> and <em>k</em>, return all possible combinations of <em>k</em> numbers out of 1 … <em>n</em>.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Given array nums = [-1, 0, 1, 2, -1, -4],</span><br><span class="line"></span><br><span class="line">A solution set is:</span><br><span class="line">[</span><br><span class="line">  [-1, 0, 1],</span><br><span class="line">  [-1, -1, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 4, k = 2</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  [2,4],</span><br><span class="line">  [3,4],</span><br><span class="line">  [2,3],</span><br><span class="line">  [1,2],</span><br><span class="line">  [1,3],</span><br><span class="line">  [1,4],</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="思路分析："><a href="#思路分析：" class="headerlink" title="思路分析："></a>思路分析：</h3><ul>
-<li>前面做过类似的 2 个数相加，<a href="https://smileyx.top/leetcode-002-add%20two%20numbers">LeetCode-001-Two Sum</a>，这里要更复杂，三个数相加，那么可以先拿出一个数，剩下的两个数利用前面的方法来找，见代码块 1.1</li>
-<li>也是和前面一样，需要先取出一个元素，然后去寻找剩下的 2 个数相加等于<code>target</code>，因为是三数相加等于 0 ，那么<code>target</code>应为前面取出的数的相反数。再操作之前，应该将给的<code>nums</code>排个序，然后利用前后指针的思想，初始化时前指针指向当前取出元素的下一个，后指针指向末尾，因为现在列表是有序的，那么当前后指针元素相加大于<code>target</code>时，很明显应该将后指针向前移动一位（意味着元素变小），小于<code>target</code>时同理将前指针向后移动一位，具体见代码 2.1</li>
+<li>题目要求列出从<code>1 - n</code>所有的<code>k</code>位数的组合，又碰到求所有组合，很容易想到用递归来求解，要写递归的关键的就是弄清楚什么时候该<code>return</code>，本题的情况明显就是当<code>temp_res</code>的长度达到<code>k</code>时<code>return</code>。</li>
 </ul>
 <hr>
-<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><blockquote>
-<p>1.1</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSum</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        temp_res = []</span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            nums_copy = nums[:]</span><br><span class="line">            nums_copy.pop(index)</span><br><span class="line">            sub_list =  self.twoSum(nums_copy, -nums[index])</span><br><span class="line">            <span class="keyword">if</span> sub_list:</span><br><span class="line">                <span class="keyword">for</span> sub <span class="keyword">in</span> sub_list:</span><br><span class="line">                    sub.insert(<span class="number">0</span>, nums[index])</span><br><span class="line">                    sub.sort()</span><br><span class="line">                    temp_res.append(sub)</span><br><span class="line">        temp_res = list(set(str(item) <span class="keyword">for</span> item <span class="keyword">in</span> temp_res))</span><br><span class="line">        res = [eval(item) <span class="keyword">for</span> item <span class="keyword">in</span> temp_res]</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, list, target)</span>:</span></span><br><span class="line">        dict = &#123;&#125;</span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> index, value <span class="keyword">in</span> enumerate(list):</span><br><span class="line">            <span class="keyword">if</span> target-value <span class="keyword">in</span> dict.values():</span><br><span class="line">                res.append([target-value, value])</span><br><span class="line">            dict[index] = value</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-<p>可以看到这段代码的时间复杂度好像是$O(n^{2})$，提交后果然<code>TLE</code>，但既然选择贴上来肯定就是有价值的，可以看到在 13 行做了一个去重的操作，但这个去重卡了好久，开始想的是直接用<code>set</code>来去重，代码就是这样的：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">temp_res = set(temp_res)</span><br></pre></td></tr></table></figure>
-<p>但报错<code>TypeError: unhashable type: &#39;list&#39;</code>，特意去查了什么意思。原来<code>set</code>对传入的参数有要求：<strong>是可迭代类型，迭代的每个元素都是可哈希的。</strong>原来我一直以为传入一个可迭代的对象就好了，受到<code>set([1, 2, 3])</code>的影响，而这里<code>temp_res</code>的格式是<code>[[], [],..]</code>（列表的嵌套），满足了第一个条件：是可迭代对象，但是迭代出来的单个元素还是<code>list</code>，而<code>list</code>是不可哈希的，至此才弄清了出错的原因。<strong>解决方案：将嵌套在里面的<code>list</code>转成字符串（字符串是可哈希的），然后再利用<code>set</code>去重，最后再用<code>eval</code>函数将字符串恢复成列表。</strong></p>
-<p>[注]：<code>list、set、dict</code>是不可哈希的，<code>int、float、str、tuple</code>是可哈希的</p>
-<blockquote>
-<p>2.1</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSum</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        nums.sort()</span><br><span class="line">        picked = set()</span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[index] &gt; <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> nums[index] <span class="keyword">in</span> picked:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            left_cursor = index + <span class="number">1</span></span><br><span class="line">            right_cursor = len(nums) - <span class="number">1</span></span><br><span class="line">            target = -nums[index]</span><br><span class="line">            <span class="keyword">while</span> left_cursor &lt; right_cursor:</span><br><span class="line">                <span class="keyword">if</span> nums[left_cursor] + nums[right_cursor] &lt; target:</span><br><span class="line">                    left_cursor += <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> nums[left_cursor] + nums[right_cursor] &gt; target:</span><br><span class="line">                    right_cursor -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    res.append([nums[index], nums[left_cursor], nums[right_cursor]])</span><br><span class="line">                    left_cursor += <span class="number">1</span></span><br><span class="line">                    right_cursor -= <span class="number">1</span></span><br><span class="line">            picked.add(nums[index])</span><br><span class="line">        res = list(set(str(item) <span class="keyword">for</span> item <span class="keyword">in</span> res))</span><br><span class="line">        res = [eval(item) <span class="keyword">for</span> item <span class="keyword">in</span> res]</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-<p>可以看到我做了两个剪枝优化：</p>
-<p>①第一步取元素的时候并没有遍历完<code>nums</code>，因为要求和等于 0 ，要么三个数都为 0 ，要么就是有正有负，而这时<code>nums</code>是有序的，当我取第一个值都大于 0 时，后面就不用找了，不可能和为 0 了，直接<code>break</code>就好。</p>
-<p>②记录前面已经取出的值，如果如果再碰到这个值可以直接跳过，减少一些重复项。</p>
-<p>开始我以为这里不需要单独的去重了，因为循环中已经避免了。但提交后碰到这么个栗子：<code>nums = [[-2,0,0,2,2]]</code>，还是会出现重复值，还是乖乖的加上了 24、25 两行代码。</p>
+<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combine</span><span class="params">(self, n, k)</span>:</span></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">if</span> k &lt;= n:</span><br><span class="line">            self.combineDFS(n, k, <span class="number">1</span>, [], res)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combineDFS</span><span class="params">(self, n, k, level, temp_res, res)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(temp_res) == k:</span><br><span class="line">            res.append(temp_res.copy())</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(level, n+<span class="number">1</span>):</span><br><span class="line">            temp_res.append(i)</span><br><span class="line">            self.combineDFS(n, k, i+<span class="number">1</span>, temp_res, res)</span><br><span class="line">            temp_res.remove(i)</span><br></pre></td></tr></table></figure>
+<p>代码的结构和前面用递归的题目大致一样，但可能对递归还是不熟吧，递归中的<code>for loop</code>写了好久，还准备在<code>for</code>前面加上<code>if level &lt;= n-k+1</code>的条件，其实自己想想压根没必要。还是要多递归多些理解！</p>
 <hr>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul>
-<li><a href="https://leetcode.com/problems/3sum/" target="_blank" rel="noopener">题目链接</a></li>
-<li><a href="https://segmentfault.com/q/1010000000394830" target="_blank" rel="noopener">segmentfault回答</a></li>
-<li><a href="http://www.chenxm.cc/article/541.html" target="_blank" rel="noopener">python 字典列表/列表套字典 去重重复的字典数据</a></li>
-<li><a href="https://blog.csdn.net/lanchunhui/article/details/50955238" target="_blank" rel="noopener">Python debug——TypeError: unhashable type（list/set/dict）</a></li>
-<li><a href="https://blog.csdn.net/zhanh1218/article/details/37562167" target="_blank" rel="noopener">Python:eval的妙用和滥用</a></li>
-<li><a href="http://www.cnblogs.com/grandyang/p/4481576.html" target="_blank" rel="noopener">[LeetCode] 3Sum 三数之和</a></li>
-<li><a href="https://segmentfault.com/a/1190000003740669" target="_blank" rel="noopener">[Leetcode] 3Sum 4Sum 3Sum Closet 多数和</a></li>
-</ul>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://www.cnblogs.com/grandyang/p/4332522.html" target="_blank" rel="noopener">Combinations 组合项</a></p>
 
       
     </div>
@@ -544,7 +506,7 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
-            <a href="/tags/k-sum-问题/" rel="tag"># k-sum 问题</a>
+            <a href="/tags/递归/" rel="tag"># 递归</a>
           
         </div>
       
@@ -557,8 +519,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/记一次用Flask搭建简单博客.html" rel="next" title="记一次用Flask搭建简单博客">
-                <i class="fa fa-chevron-left"></i> 记一次用Flask搭建简单博客
+              <a href="/LeetCode-059-Spiral Matrix II.html" rel="next" title="【medium】Spiral Matrix II">
+                <i class="fa fa-chevron-left"></i> 【medium】Spiral Matrix II
               </a>
             
           </div>
@@ -566,10 +528,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/LeetCode-016-3Sum Closest.html" rel="prev" title="【medium】3Sum Closest">
-                【medium】3Sum Closest <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
